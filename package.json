@@ -1,14 +1,21 @@
 {
-  "name": "youssef-seddik-attendance",
+  "name": "appforall",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "lint": "eslint .",
     "preview": "vite preview"
   },
-"dependencies": {
+  "dependencies": {
+    "@capacitor/android": "latest",
+    "@capacitor/app": "latest",
+    "@capacitor/core": "latest",
+    "@capacitor/haptics": "latest",
+    "@capacitor/keyboard": "latest",
+    "@capacitor/status-bar": "latest",
     "@google/generative-ai": "latest",
     "canvas-confetti": "^1.9.3",
     "lucide-react": "^0.454.0",
@@ -18,17 +25,16 @@
     "recharts": "^2.12.7",
     "xlsx": "^0.18.5"
   },
-  "dependencies": {
-    "@capacitor/android": "latest",
-    "@google/generative-ai": "latest",
-    "@types/canvas-confetti": "^1.6.4",
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21",
-    "@vitejs/plugin-react": "^4.2.1",
+  "devDependencies": {
+    "@capacitor/cli": "latest",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.18",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
-    "vite": "^5.1.6"
+    "vite": "^5.4.1"
   }
 }
