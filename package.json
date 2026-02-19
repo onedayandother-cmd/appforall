@@ -18,8 +18,9 @@
     "recharts": "^2.12.7",
     "xlsx": "^0.18.5"
   },
-  "devDependencies": {
-    "@capacitor/cli": "^6.0.0",
+  "dependencies": {
+    "@capacitor/android": "latest",
+    "@google/generative-ai": "latest",
     "@types/canvas-confetti": "^1.6.4",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
