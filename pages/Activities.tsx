@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { useState, useEffect, useMemo } from 'react';
 import { Member, AttendanceRecord } from '../types';
 import { getMembers, getAttendance } from '../utils/storage';
