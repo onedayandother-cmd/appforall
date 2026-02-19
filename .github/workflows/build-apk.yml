@@ -8,27 +8,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      # هنا قمنا بتغيير النسخة من 20 إلى 22
-      - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
       
       - name: Install Dependencies
-        run: npm install
+        run: npm install && npm install @capacitor/android @capacitor/cli
         
       - name: Build Web Project
         run: npm run build
         
-      - uses: actions/setup-java@v4
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
-          java-version: '17'
+          java-version: '21' # تم التحديث ليتوافق مع النسخ الجديدة
           
       - name: Capacitor Sync & Build APK
         run: |
           npx cap add android || true
+          npx cap copy
           npx cap sync android
-          cd android && ./gradlew assembleDebug
+          cd android && chmod +x gradlew && ./gradlew assembleDebug
           
       - uses: actions/upload-artifact@v4
         with:
