@@ -1,0 +1,8 @@
+{
+  "name": "Youssef El Seddik Attendance",
+  "description": "تطبيق لتسجيل حضور اجتماع يوسف الصديق للشباب مع نظام نقاط ومكافآت.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
